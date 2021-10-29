@@ -2,4 +2,4 @@
 
 This is Akhil Babu Yarlagadda Doing LAB !).
 
-[Hosted on](https://fwb13yarlagadda.herokuapp.com/)
+[Heroku Server](https://fwb13yarlagadda.herokuapp.com/)
