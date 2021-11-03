@@ -2,4 +2,33 @@ extends layout
 
 block content
   h1= title
-  
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let player = [
+                    {
+                        "Player_name": "Yuvraj Singh",
+                        "Batting_style": "Left-Handed",
+                        "Team": 2
+                    },
+                    {
+                        "Player_name": "Dhoni",
+                        "Batting_style": "Right-Handed",
+                        "Team": 3
+                    },
+                    {
+                        "Player_name": "Sachin",
+                        "Batting_style": "Right-Handed",
+                        "Team": 1
+                    },                   
+                ]
+            each c,index in player
+                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Player_name}
+                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Batting_style}
+                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Team}
+
+                script.                
+                      function selected(num)
+                      {
+                            alert(`Selected Player is ${num+1}`)
+                      }
