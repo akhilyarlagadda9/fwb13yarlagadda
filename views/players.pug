@@ -9,26 +9,26 @@ block content
                     {
                         "Player_name": "Yuvraj Singh",
                         "Batting_style": "Left-Handed",
-                        "Team": 2
+                        "Purchased_cost": 2000
                     },
                     {
                         "Player_name": "Dhoni",
                         "Batting_style": "Right-Handed",
-                        "Team": 3
+                        "Purchased_cost": 3000
                     },
                     {
                         "Player_name": "Sachin",
                         "Batting_style": "Right-Handed",
-                        "Team": 1
+                        "Purchased_cost": 1000
                     },                   
                 ]
             each c,index in player
-                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Player_name}
-                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Batting_style}
-                div(class="col-sm-2" onclick=`selected(${index})`) #{c.Team}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Player_name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Batting_style}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Purchased_cost}
 
                 script.                
-                      function selected(num)
+                      function buy(num)
                       {
-                            alert(`Selected Player is ${num+1}`)
+                            alert(`You purchased item ${num+1}`)
                       }
